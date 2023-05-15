@@ -1,0 +1,294 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator"
+        Loaded="Calculator_Loaded"
+        Height="730"
+        MinHeight="730"
+        Width="450"
+        MinWidth="450"
+        ResizeMode="CanResize">
+
+    <Grid Background="#232323"
+          Name="WorkSpace">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Button Content="="
+                Click="EqualButton_Click"
+                Grid.Column="3"
+                Grid.Row="7"
+                Name="EqualButton"
+                Style="{StaticResource EqualButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 3, 3" />
+
+        <Button Content=","
+                Click="ComaButton_Click"
+                Grid.Column="2"
+                Grid.Row="7"
+                Name="ComaButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 3" />
+
+        <Button Content="0"
+                Click="DigitsAdd"
+                Grid.Column="1"
+                Grid.Row="7"
+                Name="ZeroButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 3" />
+
+        <Button Content="+/-"
+                Click="SignButton_Click"
+                Grid.Column="0"
+                Grid.Row="7"
+                Name="SignButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="3, 1.5, 1.5, 3" />
+
+        <Button Content="+"
+                Click="AddButton_Click"
+                Grid.Column="3"
+                Grid.Row="6"
+                Name="AddButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 3, 1.5" />
+
+        <Button Content="3"
+                Click="DigitsAdd"
+                Grid.Column="2"
+                Grid.Row="6"
+                Name="ThreeButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="2"
+                Click="DigitsAdd"
+                Grid.Column="1"
+                Grid.Row="6"
+                Name="TwoButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="1"
+                Click="DigitsAdd"
+                Grid.Column="0"
+                Grid.Row="6"
+                Name="OneButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="3, 1.5, 1.5, 1.5" />
+
+        <Button Content="-"
+                Click="SubstractButton_Click"
+                Grid.Column="3"
+                Grid.Row="5"
+                Name="SubtractButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 3, 1.5" />
+
+        <Button Content="6"
+                Click="DigitsAdd"
+                Grid.Column="2"
+                Grid.Row="5"
+                Name="SixButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="5"
+                Click="DigitsAdd"
+                Grid.Column="1"
+                Grid.Row="5"
+                Name="FiveButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="4"
+                Click="DigitsAdd"
+                Grid.Column="0"
+                Grid.Row="5"
+                Name="FourButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="3, 1.5, 1.5, 1.5" />
+
+        <Button Content="X"
+                Click="MultiplyButton_Click"
+                Grid.Column="3"
+                Grid.Row="4"
+                Name="MultiplyButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 3, 1.5" />
+
+        <Button Content="9"
+                Click="DigitsAdd"
+                Grid.Column="2"
+                Grid.Row="4"
+                Name="NineButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="8"
+                Click="DigitsAdd"
+                Grid.Column="1"
+                Grid.Row="4"
+                Name="EightButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="7"
+                Click="DigitsAdd"
+                Grid.Column="0"
+                Grid.Row="4"
+                Name="SevenButton"
+                Style="{StaticResource DigitButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="3, 1.5, 1.5, 1.5" />
+
+        <Button Content="÷"
+                Click="DivideButton_Click"
+                Grid.Column="3"
+                Grid.Row="3"
+                Name="DivideButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 3, 1.5" />
+
+        <Button Content="√"
+                Click="SquareRootButton_Click"
+                Grid.Column="2"
+                Grid.Row="3"
+                Name="SquareRootButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="cos"
+                Click="CosButton_Click"
+                Grid.Column="1"
+                Grid.Row="3"
+                Name="CosButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="1/x"
+                Click="OneDividedByButton_Click"
+                Grid.Column="0"
+                Grid.Row="3"
+                Name="OneDivideByButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="3, 1.5, 1.5, 1.5" />
+
+        <Button Content="⌫"
+                Click="BackspaceButton_Click"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="2"
+                Name="BackspaceButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 3, 1.5" />
+
+        <Button Content="C"
+                Click="ClearButton_Click"
+                Grid.Column="1"
+                Grid.Row="2"
+                Name="ClearButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="1.5, 1.5, 1.5, 1.5" />
+
+        <Button Content="CE"
+                Click="ClearEntryButton_Click"
+                Grid.Column="0"
+                Grid.Row="2"
+                Name="ClearEntryButton"
+                Style="{StaticResource OperationButton}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="3, 1.5, 1.5, 1.5" />
+
+        <TextBox Grid.Column="0"
+                 Grid.ColumnSpan="4"
+                 Grid.Row="1"
+                 Name="DigitTextBox"
+                 Style="{StaticResource TransparentTextBox}"
+                 IsReadOnly="True"
+                 FontFamily="segoe ui bold"
+                 FontSize="42"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Right"
+                 Foreground="#ffffff"
+                 Background="#232323" />
+
+        <TextBox Grid.Column="0"
+                 Grid.ColumnSpan="4"
+                 Grid.Row="0"
+                 Name="HistoryTextBox"
+                 Style="{StaticResource TransparentTextBox}"
+                 IsReadOnly="True"
+                 FontFamily="segoe ui bold"
+                 FontSize="24"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Right"
+                 Foreground="#a6a6a6"
+                 Background="#232323" />
+    </Grid>
+</Window>
