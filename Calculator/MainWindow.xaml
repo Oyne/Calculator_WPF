@@ -11,7 +11,8 @@
         MinHeight="730"
         Width="450"
         MinWidth="450"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize"
+        WindowStartupLocation="CenterScreen">
 
     <Grid Background="#232323"
           Name="WorkSpace">
