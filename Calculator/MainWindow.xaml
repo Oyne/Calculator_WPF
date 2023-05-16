@@ -276,7 +276,7 @@
                  VerticalAlignment="Center"
                  HorizontalAlignment="Right"
                  Foreground="#ffffff"
-                 Background="#232323" />
+                 />
 
         <TextBox Grid.Column="0"
                  Grid.ColumnSpan="4"
@@ -289,6 +289,6 @@
                  VerticalAlignment="Center"
                  HorizontalAlignment="Right"
                  Foreground="#a6a6a6"
-                 Background="#232323" />
+                 />
     </Grid>
 </Window>
